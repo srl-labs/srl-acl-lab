@@ -1,0 +1,25 @@
+name: acl
+topology:
+  nodes:
+    client:
+      kind: linux
+      image: ghcr.io/srl-labs/network-multitool:latest
+      exec:
+        - ip addr add 192.168.10.10/24 dev eth1
+        - ip r add 192.168.20.0/24 via 192.168.10.1
+
+    srl:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:24.3.2
+      startup-config: srl.cfg
+
+    server:
+      kind: linux
+      image: public.ecr.aws/nginx/nginx:1.27-alpine3.19
+      exec:
+        - ip addr add 192.168.20.100/24 dev eth1
+        - ip r add 192.168.10.0/24 via 192.168.20.1
+
+  links:
+    - endpoints: ["client:eth1", "srl:e1-1"]
+    - endpoints: ["srl:e1-2", "server:eth1"]
