@@ -1,4 +1,4 @@
-# srl-acl-lab
+# Access Control Lists on SR Linux
 
 Get to know ACLs on SR Linux
 
