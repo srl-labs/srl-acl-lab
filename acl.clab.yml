@@ -1,16 +1,18 @@
 name: acl
+prefix: __lab-name
+
 topology:
   nodes:
     client:
       kind: linux
-      image: ghcr.io/srl-labs/network-multitool:latest
+      image: ghcr.io/srl-labs/network-multitool
       exec:
         - ip addr add 192.168.10.10/24 dev eth1
         - ip r add 192.168.20.0/24 via 192.168.10.1
 
     srl:
       kind: nokia_srlinux
-      image: ghcr.io/nokia/srlinux:24.3.2
+      image: ghcr.io/nokia/srlinux:24.7.1
       startup-config: srl.cfg
 
     server:

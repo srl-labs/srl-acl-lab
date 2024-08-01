@@ -17,17 +17,17 @@ Get to know ACLs on SR Linux
 After lab is started the following ping should succeed, as there is no default ACL in place.
 
 ```
-sudo docker exec -i -t clab-acl-client ping -w 2 -c 2 192.168.20.100
+sudo docker exec -i -t acl-client ping -w 2 -c 2 192.168.20.100
 ```
 
 Then configure the ACL on ethernet-1/1.0 subinterface of SR Linux to drop ICMP packets destined towards the server:
 
 ```bash
-cat icmp_drop.cfg | docker exec -i clab-acl-srl sr_cli -e -c
+cat icmp_drop.cfg | docker exec -i acl-srl sr_cli -e -c
 ```
 
 Repeat the ping, it should not succeed, as the ICMP drop ACL is in place. You can check the logs on SR Linux to ensure that the packets are being dropped:
 
 ```bash
-sudo docker exec clab-acl-srl sr_cli show system logging file acl_log
+sudo docker exec acl-srl sr_cli show system logging file acl_log
 ```
