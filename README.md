@@ -1,29 +1,8 @@
 # Access Control Lists on SR Linux
 
-<table style="border: none;">
-<tr style="border: none;">
-<td style="border: none; text-align: center;">
-<a href="https://discord.gg/tZvgjQ6PZf"><img src="https://gitlab.com/rdodin/pics/-/wikis/uploads/b822984bc95d77ba92d50109c66c7afe/join-discord-btn.svg" /></a>
-</td>
-<td style="border: none; text-align: center;">
-<a href="https://devpod.sh/open#https://github.com/srl-labs/srl-acl-lab"><img src="https://gitlab.com/rdodin/pics/-/wikis/uploads/dfc36636ecaa60f3e70340686d5800db/open-in-devpod-btn.svg" /></a>
-</td>
-<td style="border: none; text-align: center;">
-<a href="https://codespaces.new/srl-labs/srl-acl-lab?quickstart=1&devcontainer_path=.devcontainer%2Fdocker-in-docker%2Fdevcontainer.json"><img src="https://gitlab.com/rdodin/pics/-/wikis/uploads/80546a8c7cda8bb14aa799d26f55bd83/run-codespaces-btn.svg" /></a>
-</td>
-</tr>
-<tr style="border: none;">
-<td style="border: none; text-align: center;">
-
-</td>
-<td style="border: none; text-align: center;">
-<a href="https://devpod.sh">Learn more</a>
-</td>
-<td style="border: none; text-align: center;">
-<a href="https://containerlab.dev/manual/codespaces">Learn more</a>
-</td>
-</tr>
-</table>
+| [![Discord][discord-svg]](https://discord.gg/tZvgjQ6PZf) | [![DevPod][devpod-svg]][devpod-url] | [![Codespaces][codespaces-svg]][codespaces-url] |
+| :--------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                          | [Learn more](https://devpod.sh)                                                         | [Learn more](https://containerlab.dev/manual/codespaces)                                                                                                         |
 
 ---
 
@@ -46,3 +25,9 @@ Repeat the ping, it should not succeed, as the ICMP drop ACL is in place. You ca
 ```bash
 sudo docker exec acl-srl sr_cli show system logging file acl_log
 ```
+
+[discord-svg]: https://gitlab.com/rdodin/pics/-/wikis/uploads/b822984bc95d77ba92d50109c66c7afe/join-discord-btn.svg
+[devpod-svg]: https://gitlab.com/rdodin/pics/-/wikis/uploads/dfc36636ecaa60f3e70340686d5800db/open-in-devpod-btn.svg
+[codespaces-svg]: https://gitlab.com/rdodin/pics/-/wikis/uploads/80546a8c7cda8bb14aa799d26f55bd83/run-codespaces-btn.svg
+[codespaces-url]: https://codespaces.new/srl-labs/srl-acl-lab?quickstart=1&devcontainer_path=.devcontainer%2Fdocker-in-docker%2Fdevcontainer.json
+[devpod-url]: https://devpod.sh/open#https://github.com/srl-labs/srl-acl-lab
