@@ -2,7 +2,7 @@
 
 | [![Discord][discord-svg]](https://discord.gg/tZvgjQ6PZf) | [![DevPod][devpod-svg]][devpod-url] | [![Codespaces][codespaces-svg]][codespaces-url] |
 | :--------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                          | [Learn more](https://devpod.sh)                                                         | [Learn more](https://containerlab.dev/manual/codespaces)                                                                                                         |
+|                                                          | [Learn more](https://containerlab.dev/macos/#devpod)                                                         | [Learn more](https://containerlab.dev/manual/codespaces)                                                                                                         |
 
 ---
 
