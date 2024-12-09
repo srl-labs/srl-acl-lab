@@ -7,7 +7,7 @@ Get to know ACLs on SR Linux!
 
 After lab is started the following ping should succeed, as there is no default ACL in place.
 
-```
+```bash
 sudo docker exec -i -t acl-client ping -w 2 -c 2 192.168.20.100
 ```
 
